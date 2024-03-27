@@ -1,9 +1,11 @@
 import { CiStar } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
 
 const Book = ({book}) => {
-    const {image, tags, bookName, publisher, category, rating} = book;
+    const {bookId,image, tags, bookName, author, category, rating} = book;
     return (
-        <div className="border-2 border-dotted border-slate-300 rounded-lg ">
+        <NavLink id = {bookId} to={`/book/${bookId}`}>
+            <div className="border-2 border-dotted border-slate-300 rounded-lg ">
             <div className="flex justify-center bg-slate-200 p-4 m-8 rounded-lg">
                 <img src={image} className="h-52 " alt="" />
             </div>
@@ -14,7 +16,7 @@ const Book = ({book}) => {
                     }
                 </div>
                 <h1 className="text-2xl font-bold">{bookName}</h1>
-                <p>By : {publisher}</p>
+                <p>By : {author}</p>
                 <hr />
                 <div className="flex justify-between">
                     <h1>{category}</h1>
@@ -25,6 +27,7 @@ const Book = ({book}) => {
                 </div>
             </div>
         </div>
+        </NavLink>
     );
 };
 

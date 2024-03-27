@@ -9,7 +9,6 @@ const Books = () => {
       .then((data) => setBooks(data));
   }, []);
 
-  console.log(books);
   return (
     <div>
       <div className="text-3xl font-bold text-center my-4">

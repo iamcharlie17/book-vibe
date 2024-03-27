@@ -3,7 +3,7 @@ const Banner = () => {
     <div className="hero min-h-[calc(100vh-76px)] bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse ">
         <img
-          src="/public/banner.png"
+          src="/src/assets/banner.png"
           
         />
         <div className="lg:mr-8">
