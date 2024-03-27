@@ -6,6 +6,8 @@ import PagesToRead from "../pages/PagesToRead";
 import FavBooks from "../pages/FavBooks";
 import Category from "../pages/Category";
 import BookDetails from "../components/BookDetails";
+import ReadBooks from "../components/ReadBooks";
+import Wishlist from "../components/Wishlist";
 
 
 export const router = createBrowserRouter([
@@ -15,16 +17,27 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                loader: () => fetch('../books.json'),
                 element: <Home/>,
             },
             {
                 path: '/listedbooks',
-                element: <ListedBooks/>
+                element: <ListedBooks/>,
+                children: [
+                    {
+                        index: true,
+                        element: <ReadBooks/>
+                    },
+                    {
+                        path: 'whishlist',
+                        element: <Wishlist/>
+                    }
+                ]
             },
             {
                 path: '/book/:id',
                 element: <BookDetails />,
-                loader: ()=> fetch('/public/books.json')
+                loader: ()=> fetch('../books.json')
             },
             {
                 path: '/pagestoread',

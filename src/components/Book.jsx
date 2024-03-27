@@ -1,5 +1,6 @@
 import { CiStar } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Book = ({book}) => {
     const {bookId,image, tags, bookName, author, category, rating} = book;
@@ -30,5 +31,9 @@ const Book = ({book}) => {
         </NavLink>
     );
 };
+
+Book.PropTypes ={
+    name: PropTypes.string
+}
 
 export default Book;

@@ -1,11 +1,15 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { CiHeart } from "react-icons/ci";
+
+import { saveBook, saveWishlist } from "../utils";
+
 
 const BookDetails = () => {
   const books = useLoaderData();
   const id = useParams();
 
   const book = books.find((book) => book.bookId == id.id);
-  console.log(book);
+  // console.log(book);
 
   const {
     image,
@@ -20,10 +24,20 @@ const BookDetails = () => {
     rating,
   } = book;
 
+ 
+    const handleRead = (book)=>{
+      saveBook(book)
+    }
+
+    const handleWishlist = (book)=>{
+      saveWishlist(book);
+    }
+  
+
   return (
-    <div className="hero">
+    <div className="hero max-w-full">
       <div className="hero-content flex-col lg:flex-row gap-8">
-        <img src={image} className="max-w-lg rounded-2xl bg-slate-200" />
+        <img src={image} className="lg:max-w-lg rounded-2xl bg-slate-200" />
         <div className="space-y-4">
           <h1 className="text-5xl font-bold">{bookName}</h1>
           <p>By : {author}</p>
@@ -63,10 +77,11 @@ const BookDetails = () => {
             </p>
           </div>
           <div className="flex gap-4">
-            <button className="border-2 px-4 py-2 rounded-lg">Read</button>
-            <button className="text-white bg-cyan-400 px-4 py-2 rounded-lg">
+            <button onClick={()=>handleRead(book)} className="border-2 px-4 py-2 rounded-lg">Read</button>
+            <button onClick={()=>handleWishlist(book)} className="text-white bg-cyan-400 px-4 py-2 rounded-lg">
               Wishlist
             </button>
+            <button className="text-4xl"><CiHeart></CiHeart></button>
           </div>
         </div>
       </div>

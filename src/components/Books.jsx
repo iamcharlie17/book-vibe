@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Book from "./Book";
 
-const Books = () => {
-  const [books, setBooks] = useState([]);
-  useEffect(() => {
-    fetch("/public/books.json")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
+const Books = ({books}) => {
+  // const [books, setBooks] = useState([]);
+  // useEffect(() => {
+  //   fetch("/public/books.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setBooks(data));
+  // }, []);
 
   return (
     <div>
