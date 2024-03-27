@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div>
+    <div className="">
       <div className="navbar bg-base-100 fixed z-10">
         <div className="navbar-start">
           <div className="dropdown">

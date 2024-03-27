@@ -24,6 +24,8 @@ const BookDetails = () => {
     rating,
   } = book;
 
+  
+
  
     const handleRead = (book)=>{
       saveBook(book)
@@ -31,6 +33,7 @@ const BookDetails = () => {
 
     const handleWishlist = (book)=>{
       saveWishlist(book);
+      
     }
   
 

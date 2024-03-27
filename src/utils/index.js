@@ -23,8 +23,12 @@ export const saveBook =book=>{
     if(!isExist){
         books.push(book);
         localStorage.setItem('books', JSON.stringify(books))
+        toast.success('Book added to list of books successfully');  
     }
-    toast.success('Book added to list of books successfully');  
+    else{
+        return toast.error('Already added to list of books')
+    }
+    
 }
 
 export const saveWishlist = book =>{
@@ -33,6 +37,10 @@ export const saveWishlist = book =>{
     if(!isExist) {
         wishlists.push(book);
         localStorage.setItem('wishlists', JSON.stringify(wishlists))
+        toast.success('Book added to wishlist successfully');
     }
-    toast.success('Book added to wishlist successfully');
+    else{
+        return toast.error('Already added ot wishlist')
+    }
+    
 }
