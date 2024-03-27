@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import ListedBooks from "../pages/ListedBooks";
 import PagesToRead from "../pages/PagesToRead";
+import FavBooks from "../pages/FavBooks";
+import Category from "../pages/Category";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +23,14 @@ export const router = createBrowserRouter([
             {
                 path: '/pagestoread',
                 element: <PagesToRead/>
+            },
+            {
+                path: '/favbooks',
+                element: <FavBooks/>
+            },
+            {
+                path: '/category',
+                element: <Category/>
             }
         ]
     }
