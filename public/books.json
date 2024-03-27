@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "image": "https://i.ibb.co/F8ZjJBg/The-Silent-Patient.png",
+    "review": "The Silent Patient is a gripping psychological thriller that will keep you on the edge of your seat from start to finish. The story revolves around Alicia Berenson, a famous painter who murders her husband and then stops speaking. Theo Faber, a psychotherapist, becomes obsessed with uncovering the truth behind Alicia's silence. Michaelides' writing is sharp and atmospheric, creating a tense and suspenseful atmosphere.",
+    "totalPages": 336,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Suspense", "Psychological"],
+    "publisher": "Celadon Books",
+    "yearOfPublishing": 2019
+  },
+  {
+    "bookId": 2,
+    "bookName": "Educated",
+    "author": "Tara Westover",
+    "image": "https://i.ibb.co/r7ZWJMf/Educated.png",
+    "review": "Educated is a powerful and captivating memoir that chronicles Tara Westover's journey from growing up in a strict and abusive household in rural Idaho to eventually earning a PhD from Cambridge University. Westover's story is not only a testament to the power of education but also a poignant exploration of family, identity, and the struggle to reconcile one's past with their present.",
+    "totalPages": 352,
+    "rating": 4.7,
+    "category": "Autobiography",
+    "tags": ["Inspiring", "True Story"],
+    "publisher": "Random House",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 3,
+    "bookName": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "image": "https://i.ibb.co/gDm6H7f/Where-the-Crawdads-Sing.webp",
+    "review": "Where the Crawdads Sing is a beautifully written and evocative novel that transports readers to the marshes of North Carolina. The story follows Kya Clark, known as the 'Marsh Girl,' who grows up isolated from society after being abandoned by her family. As she matures, Kya forms unlikely friendships and learns to navigate the complexities of love and loss.",
+    "totalPages": 384,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": ["Nature", "Mystery"],
+    "publisher": "G.P. Putnam's Sons",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 4,
+    "bookName": "Atomic Habits",
+    "author": "James Clear",
+    "image": "https://i.ibb.co/sK406n4/Atomic-Habits.png",
+    "review": "Atomic Habits is a practical and insightful guide to building good habits and breaking bad ones. James Clear presents a comprehensive framework for understanding the science of habits and offers actionable strategies for making positive changes in your life. The key premise of the book is that small, incremental improvements can lead to significant transformations over time.",
+    "totalPages": 320,
+    "rating": 4.6,
+    "category": "Self-Help",
+    "tags": ["Productivity", "Personal Development"],
+    "publisher": "Avery",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 5,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/3hW3H4t/The-Great-Gatsby.png",
+    "review": "The Great Gatsby is a timeless classic that captures the essence of the Jazz Age in America. Set in the prosperous and extravagant 1920s, the novel follows the enigmatic Jay Gatsby and his obsession with the beautiful Daisy Buchanan. F. Scott Fitzgerald's prose is lyrical and atmospheric, painting a vivid portrait of a society obsessed with wealth, status, and the pursuit of the American Dream.",
+    "totalPages": 180,
+    "rating": 4.2,
+    "category": "Classic",
+    "tags": ["Romance", "Historical"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "image": "https://i.ibb.co/HDBFrgP/The-Subtle-Art-of-Not-Giving-a-F-ck.png",
+    "review": "The Subtle Art of Not Giving a F*ck is a refreshing and blunt self-help book that challenges conventional self-help advice. Mark Manson presents a counterintuitive approach to living a good life by encouraging readers to embrace their limitations, accept uncertainty, and prioritize what truly matters to them. Instead of focusing on relentless positivity and superficial success, Manson advocates for a more authentic and grounded approach to self-improvement.",
+    "totalPages": 224,
+    "rating": 4.0,
+    "category": "Self-Help",
+    "tags": ["Motivational", "Reality Check"],
+    "publisher": "HarperOne",
+    "yearOfPublishing": 2016
+  }
+]
