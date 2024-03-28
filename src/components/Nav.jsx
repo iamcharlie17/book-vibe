@@ -53,7 +53,7 @@ const Nav = () => {
             </ul>
           </div>
           <NavLink to="/">
-            <a className="font-bold text-xl lg:text-3xl">Book Vibe</a>
+            <a className="font-bold text-xl lg:text-3xl">B<span className="text-green-500">oo</span>k Vibe</a>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
