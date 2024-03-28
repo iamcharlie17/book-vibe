@@ -9,7 +9,7 @@ const Wishlist = () => {
       const storedBooks = getWishlists();
       setBooks(storedBooks);
     }, []);
-    console.log(books);
+
   
     //   const{image,bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating} = books;
   

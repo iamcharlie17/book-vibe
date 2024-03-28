@@ -14,7 +14,7 @@ const ListedBooks = () => {
   // console.log(books);
   const autoRefresh = ()=>{
     setInterval(function(){
-      location.reload()}, 1000);
+      location.reload()}, 500);
   }
 
   const sortByRating = () => {
@@ -69,7 +69,7 @@ const ListedBooks = () => {
       {/* tabs */}
       <div className="flex items-center mx-2 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  ">
         <Link
-          to="readbooks"
+          to=""
           onClick={() => setTabIndex(0)}
           className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
             tabIndex === 0 ? "border border-b-0" : "border-b-2"
