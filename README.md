@@ -1,8 +1,21 @@
-# React + Vite
+# Button Clicker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Site URL
+[Button Clicker App](https://charlie-assignment-8.netlify.app/)
 
-Currently, two official plugins are available:
+## Features and Characteristics
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Two Buttons**: 
+  - The app features two clickable buttons that, when clicked, store data in the local storage.
+  
+- **Button Click Tracking**: 
+  - The app tracks the click status of each button and disables the button after it's clicked.
+  
+- **Toast Notifications**: 
+  - Toast notifications are displayed using `react-hot-toast` library when a button is clicked, providing feedback to the user.
+  
+- **Local Storage**: 
+  - The app uses local storage to persist the click status of the buttons, ensuring the buttons remain disabled even after page reload.
+  
+- **User-Friendly UI**: 
+  - The UI is simple and intuitive, making it easy for users to understand and interact with the app.
