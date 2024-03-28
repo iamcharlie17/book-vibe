@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getBooks } from "../utils";
 import { Link } from "react-router-dom";
+import { getBooks } from "../utils";
 
 const ReadBooks = () => {
   const [books, setBooks] = useState([]);
@@ -9,9 +9,14 @@ const ReadBooks = () => {
     setBooks(storedBooks);
   }, []);
 
+  
+
+  
   //   const{image,bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating} = books;
 
   return (
+    <div>
+      
     <div className=" space-y-8">
       {books.map((book) => (
         <div key={book.bookId} className="">
@@ -52,6 +57,7 @@ const ReadBooks = () => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };

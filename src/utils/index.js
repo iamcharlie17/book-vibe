@@ -17,7 +17,7 @@ export const getWishlists = () => {
   return wishlists;
 };
 
-// common local storage setup
+
 export const getFavBooks = () => {
   let favbooks = [];
   let storedFavBooks = localStorage.getItem("favbooks");

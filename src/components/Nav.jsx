@@ -79,7 +79,7 @@ const Nav = () => {
             </li>
             <li>
               <NavLink to="/contact">
-                <a>Category</a>
+                <a>Contact</a>
               </NavLink>
             </li>
           </ul>

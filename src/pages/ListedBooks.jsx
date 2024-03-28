@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { getBooks } from "../utils";
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
+
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    const storedBooks = getBooks();
+    setBooks(storedBooks);
+  }, []);
+
+  // console.log(books);
+  const sortByRating = () => {
+    console.log(books);
+    books.sort((a, b) => (a.rating < b.rating ? 1 : -1));
+  };
 
   return (
     <div>
       <div className="flex items-center text-center justify-center bg-slate-200 max-w-full rounded-lg  mx-2">
         <h1 className="py-4 font-bold text-3xl">Books</h1>
       </div>
+      {/* sort */}
       <div className="flex justify-center my-4">
         <div className="dropdown">
           <div
@@ -22,7 +36,7 @@ const ListedBooks = () => {
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
+            <li onClick={() => sortByRating()}>
               <a>Ratings</a>
             </li>
             <li>
