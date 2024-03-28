@@ -8,6 +8,7 @@ import BookDetails from "../components/BookDetails";
 import ReadBooks from "../components/ReadBooks";
 import Wishlist from "../components/Wishlist";
 import Contact from "../pages/Contact";
+import NotFound from "../components/NotFound";
 
 
 export const router = createBrowserRouter([
@@ -52,5 +53,9 @@ export const router = createBrowserRouter([
                 element: <Contact/>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <NotFound/>
     }
 ])
