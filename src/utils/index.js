@@ -34,37 +34,38 @@ export const saveFavBook = (book) => {
     favbooks.push(book);
     localStorage.setItem('favbooks', JSON.stringify(favbooks));
     toast.success("Book added to fav books successfully");
+    
   }
   else{
     toast.error("Already added to Favourite books")
   }
 };
 
-export const saveBook = (book, wishlistClick) => {
+export const saveBook = (book) => {
   let books = getBooks();
   const isExist = books.find((b) => b.bookId === book.bookId);
-  if(!wishlistClick){
-    if (!isExist) {
-      books.push(book);
-      localStorage.setItem("books", JSON.stringify(books));
-      toast.success("Book added to list of books successfully");
-    } else {
-      return toast.error("Already added to list of books");
-    }
-  }
-  else{
-    return toast.error("You can not add to read");
+  if (!isExist) {
+    books.push(book);
+    localStorage.setItem("books", JSON.stringify(books));
+    toast.success("Book added to list of books successfully");
+  } else {
+    return toast.error("Already added to list of books");
   }
 };
 
-export const saveWishlist = (book) => {
+export const saveWishlist = (book, readClick) => {
   let wishlists = getWishlists();
   const isExist = wishlists.find((w) => w.bookId === book.bookId);
-  if (!isExist) {
-    wishlists.push(book);
-    localStorage.setItem("wishlists", JSON.stringify(wishlists));
-    toast.success("Book added to wishlist successfully");
-  } else {
-    return toast.error("Already added ot wishlist");
+  if(!readClick){
+    if (!isExist) {
+      wishlists.push(book);
+      localStorage.setItem("wishlists", JSON.stringify(wishlists));
+      toast.success("Book added to wishlist successfully");
+    } else {
+      return toast.error("Already added ot wishlist");
+    }
+  }
+  else{
+    toast.error('You already read the book');
   }
 };

@@ -2,7 +2,7 @@ import { FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 const Contact = () => {
   return (
-    <div className="flex justify-center max-h-screen items-center mt-12">
+    <div className="flex justify-center h-[calc(100vh)] items-center ">
       <div className="p-8 shadow-lg text-center w-96 rounded-xl">
         <div className="flex justify-center">
           <img
@@ -10,12 +10,12 @@ const Contact = () => {
             className=" w-56 border-2 rounded-full hover:scale-105 border-slate-100 "
           />
         </div>
-        <div>
+        <div className="mb-8">
           <h1 className="text-2xl font-bold">Charlie</h1>
           <h1 className="text-xl">Software Engineer</h1>
           <h1>Islamic University of Technology</h1>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 ">
           <FaFacebook />
           <a
             href="https://web.facebook.com/profile.php?id=61553430014777"

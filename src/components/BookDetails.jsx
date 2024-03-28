@@ -1,9 +1,8 @@
-import {  useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 
 import { saveBook, saveFavBook, saveWishlist } from "../utils";
 import { useState } from "react";
-
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -25,22 +24,20 @@ const BookDetails = () => {
     rating,
   } = book;
 
-  const [wishlistClick, setWishlistClick] = useState(false);
- 
-    const handleRead = (book)=>{
-      saveBook(book, wishlistClick)
-    }
+  const [readClick, setReadClick] = useState(false);
 
-    const handleWishlist = (book)=>{
-      saveWishlist(book);
-      setWishlistClick(true)
-    }
+  const handleRead = (book) => {
+    saveBook(book);
+    setReadClick(true)
+  };
 
-    const handleFavBook = (book)=>{
-      saveFavBook(book)
-    }
-    
-  
+  const handleWishlist = (book) => {
+    saveWishlist(book, readClick);
+  };
+
+  const handleFavBook = (book) => {
+    saveFavBook(book);
+  };
 
   return (
     <div className="hero lg:max-w-full">
@@ -85,11 +82,24 @@ const BookDetails = () => {
             </p>
           </div>
           <div className="flex gap-4">
-            <button onClick={()=>handleRead(book)} className="border-2 px-4 py-2 rounded-lg">Read</button>
-            <button onClick={()=>handleWishlist(book)} className="text-white bg-cyan-400 px-4 py-2 rounded-lg">
+            <button
+              onClick={() => handleRead(book)}
+              className="border-2 px-4 py-2 rounded-lg"
+            >
+              Read
+            </button>
+            <button
+              onClick={() => handleWishlist(book)}
+              className="text-white bg-cyan-400 px-4 py-2 rounded-lg"
+            >
               Wishlist
             </button>
-            <button onClick={()=>handleFavBook(book)} className="text-4xl"><CiHeart></CiHeart></button>
+            <button onClick={() => handleFavBook(book)} className="text-4xl">
+              {/*  */}
+              <div className="tooltip" data-tip="Add to Favourite">
+                <button className=" text-4xl text-pink-400"><CiHeart></CiHeart></button>
+              </div>
+            </button>
           </div>
         </div>
       </div>
