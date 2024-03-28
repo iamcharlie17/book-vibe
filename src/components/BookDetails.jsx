@@ -2,6 +2,7 @@ import {  useLoaderData, useParams } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 
 import { saveBook, saveFavBook, saveWishlist } from "../utils";
+import { useState } from "react";
 
 
 const BookDetails = () => {
@@ -24,18 +25,21 @@ const BookDetails = () => {
     rating,
   } = book;
 
+  const [wishlistClick, setWishlistClick] = useState(false);
  
     const handleRead = (book)=>{
-      saveBook(book)
+      saveBook(book, wishlistClick)
     }
 
     const handleWishlist = (book)=>{
       saveWishlist(book);
+      setWishlistClick(true)
     }
 
     const handleFavBook = (book)=>{
       saveFavBook(book)
     }
+    
   
 
   return (

@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import { getBooks } from "../utils";
+import { getWishlists } from "../utils";
 import { Link } from "react-router-dom";
 
 const Wishlist = () => {
 
     const [books, setBooks] = useState([]);
     useEffect(() => {
-      const storedBooks = getBooks();
+      const storedBooks = getWishlists();
       setBooks(storedBooks);
     }, []);
+    console.log(books);
   
     //   const{image,bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating} = books;
   

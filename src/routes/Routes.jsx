@@ -22,11 +22,11 @@ export const router = createBrowserRouter([
                 element: <Home/>,
             },
             {
-                path: '/listedbooks',
+                path: 'listedbooks',
                 element: <ListedBooks/>,
                 children: [
                     {
-                        index: true,
+                        path: 'readbooks',
                         element: <ReadBooks/>
                     },
                     {

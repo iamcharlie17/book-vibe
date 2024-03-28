@@ -12,11 +12,29 @@ const ListedBooks = () => {
   }, []);
 
   // console.log(books);
+  const autoRefresh = ()=>{
+    setInterval(function(){
+      location.reload()}, 1000);
+  }
+
   const sortByRating = () => {
     console.log(books);
     books.sort((a, b) => (a.rating < b.rating ? 1 : -1));
+    localStorage.setItem("books", JSON.stringify(books));
+    autoRefresh();
   };
 
+  const sortByPages = () => {
+    books.sort((a, b) => (a.totalPages < b.totalPages ? 1 : -1));
+    localStorage.setItem("books", JSON.stringify(books));
+    autoRefresh();
+  };
+
+  const sortByPublishingYear = () => {
+    books.sort((a, b) => (a.yearOfPublishing < b.yearOfPublishing ? 1 : -1));
+    localStorage.setItem("books", JSON.stringify(books));
+    autoRefresh();
+  };
   return (
     <div>
       <div className="flex items-center text-center justify-center bg-slate-200 max-w-full rounded-lg  mx-2">
@@ -36,14 +54,14 @@ const ListedBooks = () => {
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li onClick={() => sortByRating()}>
+            <li onClick={ sortByRating}>
               <a>Ratings</a>
             </li>
             <li>
-              <a>Number of Pages</a>
+              <a onClick={() => sortByPages()}>Number of Pages</a>
             </li>
             <li>
-              <a>Publishing Year</a>
+              <a onClick={() => sortByPublishingYear()}>Publishing Year</a>
             </li>
           </ul>
         </div>
@@ -51,7 +69,7 @@ const ListedBooks = () => {
       {/* tabs */}
       <div className="flex items-center mx-2 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  ">
         <Link
-          to=""
+          to="readbooks"
           onClick={() => setTabIndex(0)}
           className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
             tabIndex === 0 ? "border border-b-0" : "border-b-2"

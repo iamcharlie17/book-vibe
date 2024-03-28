@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getBooks } from "../utils";
+import { getBooks} from "../utils";
 
 const ReadBooks = () => {
   const [books, setBooks] = useState([]);
@@ -8,8 +8,6 @@ const ReadBooks = () => {
     const storedBooks = getBooks();
     setBooks(storedBooks);
   }, []);
-
-  
 
   
   //   const{image,bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating} = books;

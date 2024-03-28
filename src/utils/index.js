@@ -40,15 +40,20 @@ export const saveFavBook = (book) => {
   }
 };
 
-export const saveBook = (book) => {
+export const saveBook = (book, wishlistClick) => {
   let books = getBooks();
   const isExist = books.find((b) => b.bookId === book.bookId);
-  if (!isExist) {
-    books.push(book);
-    localStorage.setItem("books", JSON.stringify(books));
-    toast.success("Book added to list of books successfully");
-  } else {
-    return toast.error("Already added to list of books");
+  if(!wishlistClick){
+    if (!isExist) {
+      books.push(book);
+      localStorage.setItem("books", JSON.stringify(books));
+      toast.success("Book added to list of books successfully");
+    } else {
+      return toast.error("Already added to list of books");
+    }
+  }
+  else{
+    return toast.error("You can not add to read");
   }
 };
 
