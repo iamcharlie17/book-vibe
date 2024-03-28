@@ -1,12 +1,12 @@
-# Button Clicker App
+
 
 ## Live Site URL
-[Button Clicker App](https://charlie-assignment-8.netlify.app/)
+[Book Vibe website](https://charlie-assignment-8.netlify.app/)
 
 ## Features and Characteristics
 
-- **Two Buttons**: 
-  - The app features two clickable buttons that, when clicked, store data in the local storage.
+- **Buttons**: 
+  - Buttons are clickable, when a button click the app stores data on local storage.
   
 - **Button Click Tracking**: 
   - The app tracks the click status of each button and disables the button after it's clicked.
