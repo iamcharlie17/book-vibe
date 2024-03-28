@@ -23,10 +23,13 @@ const ListedBooks = () => {
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <a>Ratings</a>
             </li>
             <li>
-              <a>Item 2</a>
+              <a>Number of Pages</a>
+            </li>
+            <li>
+              <a>Publishing Year</a>
             </li>
           </ul>
         </div>
@@ -76,7 +79,7 @@ const ListedBooks = () => {
           </svg>
           <span>Wishlist Books</span>
         </Link>
-        <div className="border-b-2 w-full pb-6 border-solid border-black text-white">
+        <div className="border-b-2 w-full pb-6 border-solid border-slate-200 text-white">
           .{" "}
         </div>
       </div>

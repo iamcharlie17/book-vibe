@@ -4,10 +4,10 @@ import Home from "../pages/Home";
 import ListedBooks from "../pages/ListedBooks";
 import PagesToRead from "../pages/PagesToRead";
 import FavBooks from "../pages/FavBooks";
-import Category from "../pages/Category";
 import BookDetails from "../components/BookDetails";
 import ReadBooks from "../components/ReadBooks";
 import Wishlist from "../components/Wishlist";
+import Contact from "../pages/Contact";
 
 
 export const router = createBrowserRouter([
@@ -48,8 +48,8 @@ export const router = createBrowserRouter([
                 element: <FavBooks/>
             },
             {
-                path: '/category',
-                element: <Category/>
+                path: '/contact',
+                element: <Contact/>
             }
         ]
     }

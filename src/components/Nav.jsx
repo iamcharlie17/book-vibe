@@ -46,8 +46,8 @@ const Nav = () => {
                 <NavLink to="/favbooks">FavBooks</NavLink>
               </li>
               <li>
-                <NavLink to="/category">
-                  <a>Category</a>
+                <NavLink to="/contact">
+                  <a>Contact</a>
                 </NavLink>
               </li>
             </ul>
@@ -78,7 +78,7 @@ const Nav = () => {
               <NavLink to="/favbooks">FavBooks</NavLink>
             </li>
             <li>
-              <NavLink to="/category">
+              <NavLink to="/contact">
                 <a>Category</a>
               </NavLink>
             </li>

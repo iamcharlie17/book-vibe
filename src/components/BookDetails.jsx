@@ -1,7 +1,7 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import {  useLoaderData, useParams } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 
-import { saveBook, saveWishlist } from "../utils";
+import { saveBook, saveFavBook, saveWishlist } from "../utils";
 
 
 const BookDetails = () => {
@@ -24,8 +24,6 @@ const BookDetails = () => {
     rating,
   } = book;
 
-  
-
  
     const handleRead = (book)=>{
       saveBook(book)
@@ -33,12 +31,15 @@ const BookDetails = () => {
 
     const handleWishlist = (book)=>{
       saveWishlist(book);
-      
+    }
+
+    const handleFavBook = (book)=>{
+      saveFavBook(book)
     }
   
 
   return (
-    <div className="hero max-w-full">
+    <div className="hero lg:max-w-full">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <img src={image} className="lg:max-w-lg rounded-2xl bg-slate-200" />
         <div className="space-y-4">
@@ -84,7 +85,7 @@ const BookDetails = () => {
             <button onClick={()=>handleWishlist(book)} className="text-white bg-cyan-400 px-4 py-2 rounded-lg">
               Wishlist
             </button>
-            <button className="text-4xl"><CiHeart></CiHeart></button>
+            <button onClick={()=>handleFavBook(book)} className="text-4xl"><CiHeart></CiHeart></button>
           </div>
         </div>
       </div>
